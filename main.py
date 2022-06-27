@@ -32,6 +32,10 @@ class Game:
         self.last_music_change = 0
         self.last_button_change = time.time()
 
+        # Recherche et utilisation du chemin absolu sur l'ordinateur
+        dir_path = os.path.dirname(os.path.realpath(__file__))
+        os.chdir(dir_path)
+        
         # Chargement des sons
         self.alien_death_sounds = []
         self.alien_death_sounds.append(
